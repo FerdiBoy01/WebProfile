@@ -272,19 +272,25 @@ nav ul li a:hover {
   }
 }
 
-/* ========== FOOTER ========== */
+/* Footer */
+footer {
+  text-align: center;
+  padding: 0rem;
+  font-size: 0.9em;
+  color: #888;
+  background-color: #000;
+}
+
 .footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  padding: 30px 20px;
-  align-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .social-links {
   display: flex;
+  justify-content: center;
   gap: 20px;
+  margin-top: 1rem;
 }
 
 .social-links a {
