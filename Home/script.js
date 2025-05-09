@@ -1,3 +1,4 @@
+// Navigation
 const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
 
@@ -5,32 +6,47 @@ menuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
+// Typing Effect
 document.addEventListener("DOMContentLoaded", function () {
-  // Menambahkan efek typing menggunakan Typed.js
-  var typed = new Typed("#typed", {
-    strings: ["Ferdi Pratama Setia"],
+  let typed = new Typed("#typed", {
+    strings: ["Ferdi Pratama"],
     typeSpeed: 100,
     backSpeed: 50,
-    loop: false,
+    loop: true,
     showCursor: true,
     cursorChar: "|",
+    startDelay: 1000,
   });
 
-  // Animasi dengan Anime.js untuk efek masuk gambar dan teks
-  anime({
-    targets: ".main-content",
-    opacity: [0, 1],
-    translateY: [50, 0],
-    easing: "easeOutQuad",
-    duration: 1500,
+  // Scroll to content
+  document.querySelector(".scroll-indicator").addEventListener("click", () => {
+    window.scrollBy({
+      top: window.innerHeight - 100,
+      behavior: "smooth",
+    });
   });
 
-  anime({
-    targets: "#foto-profil",
-    opacity: [0, 1],
-    translateY: [20, 0],
-    easing: "easeOutQuad",
-    duration: 1000,
-    delay: 1000,
+  // Animate tech icons on hover
+  const techIcons = document.querySelectorAll(".tech-icons i");
+  techIcons.forEach((icon) => {
+    icon.addEventListener("mouseenter", () => {
+      anime({
+        targets: icon,
+        translateY: [-10, 0],
+        scale: [1, 1.2],
+        duration: 300,
+        easing: "easeOutQuad",
+      });
+    });
+
+    icon.addEventListener("mouseleave", () => {
+      anime({
+        targets: icon,
+        translateY: 0,
+        scale: 1,
+        duration: 300,
+        easing: "easeOutQuad",
+      });
+    });
   });
 });

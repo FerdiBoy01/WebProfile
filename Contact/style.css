@@ -1,0 +1,201 @@
+/* Gunakan styling global dari portfolio */
+@import url("../About/style.css");
+
+/* ========== CONTACT PAGE SPECIFIC ========== */
+.contact-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.social-media {
+  text-align: center;
+}
+
+.social-media h2 {
+  font-size: 2.5rem;
+  color: rgb(255, 230, 0);
+  margin-bottom: 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  color: white;
+  font-size: 2.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: rgb(255, 230, 0);
+}
+
+.contact-form {
+  background-color: #121212;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact-form h2 {
+  font-size: 2.5rem;
+  color: rgb(255, 230, 0);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #1e1e1e;
+  border: 1.5px solid rgba(255, 230, 0, 0.3);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: rgb(255, 230, 0);
+}
+
+.submit-btn {
+  background: rgb(255, 230, 0);
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 230, 0, 0.4);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .contact-content {
+    gap: 40px;
+    padding: 30px 15px;
+  }
+
+  .social-icons {
+    gap: 20px;
+  }
+
+  .social-icon {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 30px;
+  }
+
+  .contact-form h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icons {
+    gap: 15px;
+  }
+
+  .social-icon {
+    font-size: 1.8rem;
+  }
+
+  .contact-form {
+    padding: 25px 20px;
+  }
+}
+
+/* ========== ANIMATIONS ========== */
+/* Fade-in untuk seluruh halaman */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  animation: pageFadeIn 0.8s ease-out forwards;
+}
+
+/* Animasi untuk sosial media */
+.social-icon {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.6s ease-out forwards;
+}
+
+.social-icon:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.social-icon:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.social-icon:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.social-icon:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+/* Animasi untuk form */
+.contact-form {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 0.8s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+/* Reuse animasi dari halaman About */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

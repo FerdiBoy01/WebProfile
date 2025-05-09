@@ -82,29 +82,6 @@ nav ul li a:hover {
   margin: 4px 0;
 }
 
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: #121212;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    border-radius: 8px;
-    width: 150px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 1rem;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-}
-
 /* About Section */
 .about-content {
   padding: 40px 20px;
@@ -112,6 +89,7 @@ nav ul li a:hover {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   gap: 40px;
 }
 
@@ -123,7 +101,7 @@ nav ul li a:hover {
   margin-bottom: 40px;
   background-color: transparent;
   border-radius: 12px;
-  padding: 70px;
+  padding: 40px;
   width: 100%;
   opacity: 0;
   animation: fadeSlideUp 0.8s ease-out forwards;
@@ -153,15 +131,13 @@ nav ul li a:hover {
 
 .skills {
   text-align: left;
-  width: 400px;
-  flex-shrink: 0;
+  width: 100%;
   background-color: #121212;
   border-radius: 12px;
   padding: 30px;
   opacity: 0;
   animation: fadeSlideUp 0.8s ease-out forwards;
   animation-delay: 0.2s;
-  height: 445px;
 }
 
 .skills h2 {
@@ -172,7 +148,7 @@ nav ul li a:hover {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
@@ -212,7 +188,7 @@ nav ul li a:hover {
   box-shadow: 0 6px 16px rgba(255, 230, 0, 0.4);
 }
 
-/* Animasi untuk memasukkan elemen */
+/* Animasi */
 @keyframes fadeSlideUp {
   0% {
     opacity: 0;
@@ -224,41 +200,93 @@ nav ul li a:hover {
   }
 }
 
-/* Responsive Styles */
+/* ================= RESPONSIVE BREAKPOINTS ================= */
+/* Tablet (768px - 1024px) */
 @media (max-width: 1024px) {
-  .about-content {
-    flex-direction: column;
-  }
-
-  .skills {
-    width: 100%;
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 768px) {
   .about-card {
     flex-direction: column;
-    gap: 20px;
-    padding: 40px;
-  }
-
-  .skills {
+    align-items: center;
     padding: 30px;
   }
 
+  .about-photo img {
+    width: 180px;
+  }
+
   .skills-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile Landscape / Small Tablet (576px - 768px) */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #121212;
+    flex-direction: column;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .about-card {
+    padding: 20px;
+  }
+
+  .skills {
+    padding: 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small Mobile (≤ 576px) */
+@media (max-width: 576px) {
+  .about-text h2,
+  .skills h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .skill-box {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+
+  .skill-box img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Very Small Mobile (≤ 400px) */
+@media (max-width: 400px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
   .about-photo img {
     width: 150px;
-  }
-}
-
-@media (max-width: 480px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 

@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ferdi Pratama Setia</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <!-- Navigation (tetap sama) -->
     <nav>
       <div class="nav-left">
-        <span class="nama" id="nama">Ferdi Pratama Setia</span>
+        <span class="nama">FrdiBoy_</span>
       </div>
 
       <div class="menu-toggle" id="menu-toggle">
@@ -22,10 +24,10 @@
       </div>
 
       <ul id="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="../About/About.html">About</a></li>
+        <li><a href="../Home/index.html">Home</a></li>
+        <li><a href="../About/about.html">About</a></li>
         <li><a href="../Portofolio/index.html">Portofolio</a></li>
-        <li><a href="#home">Contact</a></li>
+        <li><a href="../Contact/Contact.html" class="active">Contact</a></li>
       </ul>
 
       <div class="nav-right">
@@ -36,17 +38,50 @@
     </nav>
 
     <section id="home" class="main-content">
-      <div class="text-content">
-        <div class="typing-text" id="typed"></div>
-        <div class="lead">Mahasiswa || Fullstack Web Developer</div>
-        <div class="description">Saya sedang belajar membuat website dan aplikasi sebagai bagian dari pengembangan diri dan studi saya.</div>
-      </div>
-      <div class="foto">
-        <img src="../img/Ferdi.jpg" alt="Foto Profil" id="foto-profil" />
+      <div class="hero-container">
+        <div class="text-content">
+          <div class="typing-text" id="typed"></div>
+          <div class="lead">
+            <span class="title-icon"><i class="fas fa-graduation-cap"></i></span>
+            Mahasiswa
+            <span class="divider">|</span>
+            <span class="title-icon"><i class="fas fa-code"></i></span>
+            Fullstack Developer
+          </div>
+
+          <div class="description">Membangun solusi digital dengan teknologi modern dan desain yang intuitif.</div>
+
+          <div class="cta-buttons">
+            <a href="../Portofolio/index.html" class="btn-primary"> Lihat Portofolio <i class="fas fa-arrow-right"></i> </a>
+            <a href="../Contact/Contact.html" class="btn-secondary"> Hubungi Saya <i class="fas fa-paper-plane"></i> </a>
+          </div>
+        </div>
+
+        <div class="foto">
+          <div class="photo-frame">
+            <img src="../img/Ferdi.jpg" alt="Foto Profil" id="foto-profil" />
+            <div class="frame-decoration"></div>
+          </div>
+          <div class="tech-icons">
+            <i class="fab fa-html5" style="color: #e34f26"></i>
+            <i class="fab fa-css3-alt" style="color: #2965f1"></i>
+            <i class="fab fa-js" style="color: #f7df1e"></i>
+            <i class="fab fa-react" style="color: #61dafb"></i>
+            <i class="fab fa-node-js" style="color: #68a063"></i>
+          </div>
+        </div>
       </div>
     </section>
 
-    <footer>&copy; 2025 Ferdi Pratama Setia. All rights reserved.</footer>
+    <footer>
+      <div class="footer-content">
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
